@@ -2,8 +2,9 @@
     "name": "facade/ignition-contracts",
     "description": "Solution contracts for Ignition",
     "keywords": [
-        "laravel",
-        "flare-contracts"
+        "flare",
+        "contracts",
+        "ignition"
     ],
     "homepage": "https://github.com/facade/ignition-contracts",
     "license": "MIT",
@@ -11,7 +12,7 @@
         {
             "name": "Freek Van der Herten",
             "email": "freek@spatie.be",
-            "homepage": "https://laravel.be",
+            "homepage": "https://flareapp.io",
             "role": "Developer"
         }
     ],
