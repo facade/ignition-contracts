@@ -11,7 +11,7 @@ This repository contains the interfaces used to display solution on [Ignition](h
 
 ## Documentation
 
-You can find the documentation of this package at [the docs of Flare](https://flareapp.io.test/docs/solutions/introduction).
+You can find the documentation of this package at [the docs of Flare](https://flareapp.io/docs/solutions/introduction).
 
 ## Changelog
 
