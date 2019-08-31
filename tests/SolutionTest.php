@@ -2,8 +2,8 @@
 
 namespace Facade\IgnitionContracts\Tests;
 
-use Facade\IgnitionContracts\BaseSolution;
 use PHPUnit\Framework\TestCase;
+use Facade\IgnitionContracts\BaseSolution;
 
 class SolutionTest extends TestCase
 {
@@ -15,4 +15,3 @@ class SolutionTest extends TestCase
         $this->assertInstanceOf(BaseSolution::class, $solution);
     }
 }
-

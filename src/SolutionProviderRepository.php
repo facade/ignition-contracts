@@ -18,4 +18,3 @@ interface SolutionProviderRepository
 
     public function getSolutionForClass(string $solutionClass): ?Solution;
 }
-
