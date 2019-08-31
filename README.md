@@ -1,7 +1,7 @@
 # Flare contracts
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/facade/ignition-contracts.svg?style=flat-square)](https://packagist.org/packages/facade/ignition-contracts)
-[![Build Status](https://img.shields.io/circleci/build/gh/spatie/ignition-contracts/master.svg?token=d92a2ec635d3e408b1df80ba214a5e8d549dea09&style=flat-square)](https://travis-ci.org/facade/ignition-contracts)
+[![Build Status](https://img.shields.io/travis/facade/ignition-contracts/master.svg?style=flat-square)](https://travis-ci.org/facade/ignition-contracts)
 [![Quality Score](https://img.shields.io/scrutinizer/g/facade/ignition-contracts.svg?style=flat-square)](https://scrutinizer-ci.com/g/facade/ignition-contracts)
 [![StyleCI](https://github.styleci.io/repos/204472836/shield?branch=master)](https://github.styleci.io/repos/204472836)
 [![Total Downloads](https://img.shields.io/packagist/dt/facade/ignition-contracts.svg?style=flat-square)](https://packagist.org/packages/facade/ignition-contracts)
