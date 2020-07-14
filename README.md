@@ -1,6 +1,8 @@
 # Flare contracts
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/facade/ignition-contracts.svg?style=flat-square)](https://packagist.org/packages/facade/ignition-contracts)
+![Tests](https://github.com/facade/ignition-contracts/workflows/Run%20tests/badge.svg)
+![Psalm](https://github.com/facade/ignition-contracts/workflows/Psalm/badge.svg)
 [![Total Downloads](https://img.shields.io/packagist/dt/facade/ignition-contracts.svg?style=flat-square)](https://packagist.org/packages/facade/ignition-contracts)
 
 This repository contains the interfaces used to display solution on [Ignition](https://flareapp.io/docs/ignition-for-laravel/introduction) and [Flare](https://flareapp.io.).
