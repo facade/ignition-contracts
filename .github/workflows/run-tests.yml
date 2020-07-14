@@ -24,7 +24,7 @@ jobs:
 
         steps:
             - name: Checkout code
-              uses: actions/checkout@v1
+              uses: actions/checkout@v2
 
             - name: Setup PHP
               uses: shivammathur/setup-php@v2
@@ -40,38 +40,3 @@ jobs:
 
             - name: Execute tests
               run: vendor/bin/phpunit
-
-            - name: Send Slack notification
-              uses: 8398a7/action-slack@v2
-              if: failure()
-              with:
-                  status: ${{ job.status }}
-                  author_name: ${{ github.actor }}
-              env:
-                SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
-                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    js-tests:
-        runs-on: ubuntu-latest
-
-        name: JavaScript tests
-
-        steps:
-            -   name: Checkout code
-                uses: actions/checkout@v1
-
-            -   name: Install dependencies
-                run: yarn install --non-interactive
-
-            -   name: Execute tests
-                run: yarn run jest
-
-            - name: Send Slack notification
-              uses: 8398a7/action-slack@v2
-              if: failure()
-              with:
-                  status: ${{ job.status }}
-                  author_name: ${{ github.actor }}
-              env:
-                SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
-                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
