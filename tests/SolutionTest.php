@@ -2,8 +2,8 @@
 
 namespace Facade\IgnitionContracts\Tests;
 
-use PHPUnit\Framework\TestCase;
 use Facade\IgnitionContracts\BaseSolution;
+use PHPUnit\Framework\TestCase;
 
 class SolutionTest extends TestCase
 {

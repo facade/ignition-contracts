@@ -12,7 +12,7 @@ interface SolutionProviderRepository
 
     /**
      * @param Throwable $throwable
-     * @return HasSolutionsForThrowable[]
+     * @return \Facade\IgnitionContracts\Solution[]
      */
     public function getSolutionsForThrowable(Throwable $throwable): array;
 
