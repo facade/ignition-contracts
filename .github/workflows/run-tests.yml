@@ -1,10 +1,10 @@
 name: Run tests
 
 on:
-  push:
-  pull_request:
-  schedule:
-      - cron: '0 0 * * *'
+    push:
+    pull_request:
+    schedule:
+        -   cron: '0 0 * * *'
 
 jobs:
     php-tests:
@@ -12,27 +12,30 @@ jobs:
 
         strategy:
             matrix:
-                php: [8.0, 7.4, 7.3]
-                dependency-version: [prefer-lowest, prefer-stable]
-                os: [ubuntu-latest, windows-latest]
+                php: [ 8.0, 7.4, 7.3 ]
+                dependency-version: [ prefer-lowest, prefer-stable ]
+                os: [ ubuntu-latest, windows-latest ]
                 allow_failures:
-                    - php: 8.0
+                    -   php: 8.0
 
         name: P${{ matrix.php }} - ${{ matrix.dependency-version }} - ${{ matrix.os }}
 
         steps:
-            - name: Checkout code
-              uses: actions/checkout@v2
+            -   name: Checkout code
+                uses: actions/checkout@v2
 
-            - name: Setup PHP
-              uses: shivammathur/setup-php@v2
-              with:
-                  php-version: ${{ matrix.php }}
-                  coverage: none
+            -   name: Set up PHP
+                uses: shivammathur/setup-php@v2
+                with:
+                    php-version: ${{ matrix.php }}
+                    coverage: none
+            -   name: Install PHP 7 dependencies
+                run: composer update --${{ matrix.dependency-version }} --no-interaction --no-progress
+                if: "matrix.php < 8"
 
-            - name: Install dependencies
-              run: |
-                  composer update --${{ matrix.dependency-version }} --no-interaction --no-suggest
+            -   name: Install PHP 8 dependencies
+                run: composer update --${{ matrix.dependency-version }} --ignore-platform-req=php --no-interaction --no-progress
+                if: "matrix.php >= 8"
 
-            - name: Execute tests
-              run: vendor/bin/phpunit
+            -   name: Execute tests
+                run: vendor/bin/phpunit
