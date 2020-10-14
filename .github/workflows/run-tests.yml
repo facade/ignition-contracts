@@ -36,7 +36,7 @@ jobs:
                 if: "matrix.php < 8"
 
             -   name: Install PHP 8 dependencies
-                run: composer update --${{ matrix.dependency-version }} --ignore-platform-req=php --no-interaction --no-progress
+                run: composer update --prefer-stable --ignore-platform-req=php --no-interaction --no-progress
                 if: "matrix.php >= 8"
 
             -   name: Execute tests
