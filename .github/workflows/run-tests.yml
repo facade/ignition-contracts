@@ -29,7 +29,9 @@ jobs:
                 with:
                     php-version: ${{ matrix.php }}
                     coverage: none
-            -   name: Install PHP 7 dependencies
+                    tools: composer:v2
+
+                -   name: Install PHP 7 dependencies
                 run: composer update --${{ matrix.dependency-version }} --no-interaction --no-progress
                 if: "matrix.php < 8"
 
