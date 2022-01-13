@@ -2,7 +2,6 @@
 
 namespace Facade\IgnitionContracts;
 
-interface ProvidesSolution
+interface ProvidesSolution extends \Spatie\Ignition\Contracts\ProvidesSolution
 {
-    public function getSolution(): Solution;
 }

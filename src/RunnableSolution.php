@@ -2,13 +2,6 @@
 
 namespace Facade\IgnitionContracts;
 
-interface RunnableSolution extends Solution
+interface RunnableSolution extends \Spatie\Ignition\Contracts\RunnableSolution, Solution
 {
-    public function getSolutionActionDescription(): string;
-
-    public function getRunButtonText(): string;
-
-    public function run(array $parameters = []);
-
-    public function getRunParameters(): array;
 }
